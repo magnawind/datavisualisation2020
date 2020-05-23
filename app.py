@@ -1,12 +1,5 @@
-# Import required libraries
-import os
-from random import randint
-
-import plotly.plotly as py
-from plotly.graph_objs import *
 
 import os
-
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
