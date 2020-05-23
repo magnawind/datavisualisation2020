@@ -1,0 +1,12 @@
+Diesel,Traction,0.0144
+Traction,Bread Wheat,0.0144
+Fertilizer(N),Bread Wheat,0.0264
+Electricity (Natural gas),Bread Wheat,0.0077
+Bread Wheat,Flour,0.875
+Flour,Fresh Bread,0.7
+Fresh Bread,Bread at wholesale,1
+Bread at wholesale,Bread at supermarket,1
+Truck,Bread at wholesale,0.006307407407
+Truck,Bread at supermarket,0.00337037037
+Heat (Natural gas),Fresh Bread,0.0266
+Diesel,Truck,0.009677777778
