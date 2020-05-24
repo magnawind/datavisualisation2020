@@ -1,0 +1,14 @@
+Diesel,Traction,red,0.013068
+Traction,Rape Seed,blue,0.009636363636
+Rape Seed,Rape Seed Oil,orange,0.188
+Rape Seed Oil,Trout Feed,orange,0.0784
+Rape Seed Oil,Fishmeal,orange,0.1096
+Trout Feed,Trout,orange,0.94
+Diesel,Fishing Vessel,red,0.084032
+Fishing Vessel,Sand Eel,blue,0.084032
+Sand Eel,Fishmeal,orange,2.06
+Fishmeal,Trout Feed,orange,0.442
+Heat Oil,Heat (FIsh industry),red,0.01511111111
+Heat (FIsh industry),Trout Feed,blue,0.0341
+Natural Gas,Heat (FIsh industry),red,0.048
+Heat (FIsh industry),Fishmeal,blue,0.0341
