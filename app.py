@@ -62,10 +62,14 @@ def create_chart(file):
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 server = app.server
-fig = create_chart('LCA.csv')
+fig = create_chart('trout_production.csv')
 
 app.layout = html.Div([
     html.H2('Magnus Winding'),
+    dcc.Tabs(id="tabs", value='tab-1', children=[
+            dcc.Tab(label='Production chain', value='tab-1'),
+            dcc.Tab(label='Waste chain', value='tab-2'),
+    ]),
     dcc.Dropdown(
         id='dropdown',
         options=[{'label': i, 'value': i} for i in ['Trout', 'Bread', 'Chicken']],
@@ -75,19 +79,34 @@ app.layout = html.Div([
     dcc.Graph(id='sankey', figure=fig)
 ])
 
+dropdown_value = 'Trout'
+
+
 @app.callback(dash.dependencies.Output('display-value', 'children'),
               [dash.dependencies.Input('dropdown', 'value')])
 def display_value(value):
+    dropdown_value = value
     return 'You have selected "{}"'.format(value)
 
 @app.callback(dash.dependencies.Output('sankey', 'figure'),
               [dash.dependencies.Input('dropdown', 'value')])
 def change_chart(value):
     if value == 'Trout':
-        return create_chart('LCA.csv')
+        return create_chart('trout_production_chain.csv')
     if value == 'Bread':
-        return create_chart('LCA2.csv')
+        return create_chart('bread_production_chain.csv')
     return
+
+
+@app.callback(dash.dependencies.Output('sankey', 'figure'),
+              [dash.dependencies.Input('tabs', 'value')])
+def render_content(tab):
+    if tab == 'tab-1':
+        if dropdown_value == 'Trout':
+            return create_chart('trout_production.csv')
+    if tab == 'tab-2':
+        if dropdown_value == 'Trout':
+            return create_chart('trout_waste.csv')
 
 if __name__ == '__main__':
     app.run_server(debug=True)
