@@ -5,14 +5,16 @@ import dash_html_components as html
 import plotly.graph_objects as go
 import csv
 
-labels = {}
-index = 0
-sources = []
-targets = []
-values = []
-edge_colors = []
 
 def create_chart(file):
+
+    labels = {}
+    index = 0
+    sources = []
+    targets = []
+    values = []
+    edge_colors = []
+
     with open(file, newline='') as csvfile:
         LCAreader = csv.reader(csvfile)
         for row in LCAreader:
