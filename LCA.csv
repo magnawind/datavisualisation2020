@@ -1,12 +1,28 @@
-Diesel,Traction,0.0144
-Traction,Bread Wheat,0.0144
-Fertilizer(N),Bread Wheat,0.0264
-Electricity (Natural gas),Bread Wheat,0.0077
-Bread Wheat,Flour,0.875
-Flour,Fresh Bread,0.7
-Fresh Bread,Bread at wholesale,1
-Bread at wholesale,Bread at supermarket,1
-Truck,Bread at wholesale,0.006307407407
-Truck,Bread at supermarket,0.00337037037
-Heat (Natural gas),Fresh Bread,0.0266
-Diesel,Truck,0.009677777778
+Diesel,Traction,red,0.013068
+Traction,Rape Seed,blue,0.009636363636
+Rape Seed,Rape Seed Oil,orange,0.188
+Rape Seed Oil,Trout Feed,orange,0.0784
+Rape Seed Oil,Fishmeal,orange,0.1096
+Trout Feed,Trout,orange,0.94
+Diesel,Fishing Vessel,red,0.084032
+Fishing Vessel,Sand Eel,blue,0.084032
+Sand Eel,Fishmeal,orange,2.06
+Fishmeal,Trout Feed,orange,0.442
+Heat Oil,Heat (FIsh industry),red,0.01511111111
+Heat (FIsh industry),Trout Feed,blue,0.0341
+Natural Gas,Heat (FIsh industry),red,0.048
+Heat (FIsh industry),Fishmeal,blue,0.0341
+Natural Gas,Electricity,red,0.2325
+Electricity,Rape Seed,blue,0.01488
+Electricity,Rape Seed Oil,blue,0.01488
+Electricity,Trout Feed,blue,0.01488
+Electricity,Fishmeal,blue,0.01488
+Electricity,Trout,blue,0.01488
+Inorganic Chemicals,Rape Seed Oil,orange,0.011525
+Inorganic Chemicals,Trout Feed,orange,0.011525
+Inorganic Chemicals,Trout,orange,0.011525
+Inorganic Chemicals,Fishmeal,orange,0.011525
+Diesel,Truck,red,0.008618518519
+Truck,Rape Seed,orange,0.002872839506
+Truck,Trout Feed,orange,0.002872839506
+Truck,Fishmeal,orange,0.002872839506

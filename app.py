@@ -10,12 +10,15 @@ index = 0
 sources = []
 targets = []
 values = []
+edge_colors = []
+
 with open('LCA.csv', newline='') as csvfile:
     LCAreader = csv.reader(csvfile)
     for row in LCAreader:
         source = row[0]
         target = row[1]
-        value = row[2]
+        edge_color = row[2]
+        value = row[3]
         if source not in labels:
             labels[source] = index
             index += 1
@@ -25,8 +28,15 @@ with open('LCA.csv', newline='') as csvfile:
         sources.append(labels[source])
         targets.append(labels[target])
         values.append(float(value))
+        if edge_color == 'red':
+            edge_colors.append('rgba(255,0,0, 0.5)')
+        elif edge_color == 'blue':
+            edge_colors.append('rgba(0,0,255, 0.5)')
+        elif edge_color == 'orange':
+            edge_colors.append('rgba(150,150,150, 0.5)')
 
 fig = go.Figure(data=[go.Sankey(
+    arrangement = "snap",
     node = dict(
       pad = 15,
       thickness = 20,
@@ -37,11 +47,11 @@ fig = go.Figure(data=[go.Sankey(
     link = dict(
       source = sources, # indices correspond to labels, eg A1, A2, A2, B1, ...
       target = targets,
-      value = values
+      value = values,
+      color = edge_colors
   ))])
 
 fig.update_layout(title_text="Basic Sankey Diagram", font_size=10)
-
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
