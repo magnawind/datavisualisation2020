@@ -82,9 +82,9 @@ def display_value(value):
               [dash.dependencies.Input('dropdown', 'value')])
 def change_chart(value):
     if value == 'Trout':
-        return create_chart('LSA.csv')
+        return create_chart('LCA.csv')
     if value == 'Bread':
-        return create_chart('LSA2.csv')
+        return create_chart('LCA2.csv')
     return
 
 if __name__ == '__main__':
