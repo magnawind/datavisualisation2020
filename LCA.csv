@@ -1,0 +1,28 @@
+Diesel,Traction,Diesel,fossil fuel,0.013068,fossil fuel
+Traction,Rape Seed Cultivation,Traction,process,0.009636363636,process
+Rape Seed Cultivation,Rape Seed Oil Production,Rape Seed,product,0.188,process
+Rape Seed Oil Production,Feed Production,Rape Seed Oil,product,0.0784,process
+Rape Seed Oil Production,Fishmeal Production,Fishmeal,product,0.1096,process
+Feed Production,Trout Cultivation,Trout Feed,product,0.94,process
+Diesel,Fishing Vessel,Diesel,fossil fuel,0.084032,fossil fuel
+Fishing Vessel,Sand Eel Catch,Fishing,process,0.084032,process
+Sand Eel Catch,Fishmeal Production,Sand Eel,natural resource,0.442,process
+Fishmeal Production,Feed Production,Fishmeal,product,0.442,process
+Heat Oil,Heat (FIsh industry),Heating Oil,fossil fuel,0.01511111111,fossil fuel
+Heat (FIsh industry),Feed Production,Heat,heat,0.0341,process
+Heat Gas,Heat (FIsh industry),Heating Gas,fossil fuel,0.048,fossil fuel
+Heat (FIsh industry),Fishmeal Production,Heat,heat,0.0341,process
+Natural Gas,Electricity,Natural Gas,fossil fuel,0.2325,fossil fuel
+Electricity,Rape Seed Cultivation,Electricity,electricity,0.01488,process
+Electricity,Rape Seed Oil Production,Electricity,electricity,0.01488,process
+Electricity,Feed Production,Electricity,electricity,0.01488,process
+Electricity,Fishmeal Production,Electricity,electricity,0.01488,process
+Electricity,Trout Cultivation,Electricity,electricity,0.01488,process
+Inorganic Chemicals,Rape Seed Oil Production,Inorganic Chemicals,chemical,0.011525,product
+Inorganic Chemicals,Feed Production,Inorganic Chemicals,chemical,0.011525,product
+Inorganic Chemicals,Trout Cultivation,Inorganic Chemicals,chemical,0.011525,product
+Inorganic Chemicals,Fishmeal Production,Inorganic Chemicals,chemical,0.011525,product
+Diesel,Truck,Diesel,fossil fuel,0.008618518519,fossil fuel
+Truck,Rape Seed Cultivation,Truck Transport,process,0.002872839506,process
+Truck,Feed Production,Truck Transport,process,0.002872839506,process
+Truck,Fishmeal Production,Truck Transport,process,0.002872839506,process
