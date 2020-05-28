@@ -4,6 +4,7 @@ import dash_core_components as dcc
 import dash_html_components as html
 import plotly.graph_objects as go
 import csv
+import base64
 
 
 def create_chart(file):
@@ -90,10 +91,16 @@ def create_chart(file):
     return fig
 
 
+def show_orig_image(file):
+    encoded_image = base64.b64encode(open(file, 'rb').read())
+    return encoded_image
+
+
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 server = app.server
 fig = create_chart('LCA.csv')
+img = show_orig_image('original_trout.png')
 
 app.layout = html.Div([
     html.H2('Magnus Winding'),
@@ -103,7 +110,8 @@ app.layout = html.Div([
         value='Trout'
     ),
     html.Div(id='display-value'),
-    dcc.Graph(id='sankey', figure=fig)
+    dcc.Graph(id='sankey', figure=fig),
+    html.Img(id=img, src='data:image/png;base64,{}'.format(img))
 ])
 
 @app.callback(dash.dependencies.Output('display-value', 'children'),
@@ -119,6 +127,7 @@ def change_chart(value):
     if value == 'Bread':
         return create_chart('bread_production_chain.csv')
     return
+
 
 if __name__ == '__main__':
     app.run_server(debug=True)
