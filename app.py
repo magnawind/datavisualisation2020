@@ -111,7 +111,7 @@ app.layout = html.Div([
     ),
     html.Div(id='display-value'),
     dcc.Graph(id='sankey', figure=fig),
-    html.Img(id=img, src='data:image/png;base64,{}'.format(img))
+    html.Img(id='img', src='data:image/png;base64,{}'.format(img))
 ])
 
 @app.callback(dash.dependencies.Output('display-value', 'children'),
