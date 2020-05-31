@@ -101,6 +101,7 @@ app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 server = app.server
 fig = create_chart('LCA.csv')
 img = show_orig_image('original_trout.png')
+encoded_image = base64.b64encode(open(img, 'rb').read())
 
 app.layout = html.Div([
     html.H2('Magnus Winding'),
@@ -111,7 +112,7 @@ app.layout = html.Div([
     ),
     html.Div(id='display-value'),
     dcc.Graph(id='sankey', figure=fig),
-    html.Img(id='img', src='data:image/png;base64,{}'.format(img))
+    html.Img(id='img', src='data:image/png;base64,{}'.format(encoded_image))
 ])
 
 @app.callback(dash.dependencies.Output('display-value', 'children'),
