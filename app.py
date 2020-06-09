@@ -113,7 +113,7 @@ app.layout = html.Div([
     ),
     html.Div(id='display-value'),
     dcc.Graph(id='sankey', figure=fig),
-    html.Img(src='data:image/png;base64,{}'.format(encoded_image)),
+    html.Img(src='data:image/png;base64,{}'.format(encoded_image.decode())),
     html.Div(children='''
         Life Cycle Assessments (LCA) are more than ever relevant in the growing effort to reduce the environmental
         footprint and demand for resources from human consumption.
