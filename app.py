@@ -114,12 +114,13 @@ app.layout = html.Div([
     html.Img(id='img', src='data:image/png;base64,{}'.format(img)),
     html.Div(children='''
             Life Cycle Assessments (LCA) are more than ever relevant in the growing effort to reduce the environmental
-            footprint and demand for resources from human consumption. LCA reports and associated visualisations are
-            originally intended for communication within people with relevant domain knowledge usually in order to
-            document and optimize industrial processes. However, with the increasing individual attention towards,
-            among other trends, global warming and the acceptance of a need to readjust behaviour - I believe that
-            ordinary people are gaining interest in the knowledge and data they can obtain from LCAs - especially if
-            they are communicated with updated visualisation for easier digestion.
+            footprint and demand for resources from human consumption. <br>
+            LCA reports and associated visualisations are originally intended for communication within people with
+            relevant domain knowledge usually in order to document and optimize industrial processes.<br>
+            However, with the increasing individual attention towards, among other trends, global warming and the
+            acceptance of a need to readjust behaviour - <br>
+            I believe that ordinary people are gaining interest in the knowledge and data they can obtain from LCAs
+            - especially if they are communicated with updated visualisation for easier digestion.
         ''')
 ])
 
