@@ -100,7 +100,9 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 server = app.server
 fig = create_chart('LCA.csv')
-img = show_orig_image('original_trout.png')
+
+image_filename = 'original_trout.png' # replace with your own image
+encoded_image = base64.b64encode(open(image_filename, 'rb').read())
 
 app.layout = html.Div([
     html.H2('Magnus Winding'),
@@ -111,7 +113,7 @@ app.layout = html.Div([
     ),
     html.Div(id='display-value'),
     dcc.Graph(id='sankey', figure=fig),
-    html.Img(id='img', src='data:image/png;base64,{}'.format(img)),
+    html.Img(src='data:image/png;base64,{}'.format(encoded_image)),
     html.Div(children='''
         Life Cycle Assessments (LCA) are more than ever relevant in the growing effort to reduce the environmental
         footprint and demand for resources from human consumption.
