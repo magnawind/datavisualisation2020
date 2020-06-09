@@ -113,15 +113,21 @@ app.layout = html.Div([
     dcc.Graph(id='sankey', figure=fig),
     html.Img(id='img', src='data:image/png;base64,{}'.format(img)),
     html.Div(children='''
-            Life Cycle Assessments (LCA) are more than ever relevant in the growing effort to reduce the environmental
-            footprint and demand for resources from human consumption. <br>
-            LCA reports and associated visualisations are originally intended for communication within people with
-            relevant domain knowledge usually in order to document and optimize industrial processes.<br>
-            However, with the increasing individual attention towards, among other trends, global warming and the
-            acceptance of a need to readjust behaviour - <br>
-            I believe that ordinary people are gaining interest in the knowledge and data they can obtain from LCAs
-            - especially if they are communicated with updated visualisation for easier digestion.
-        ''')
+        Life Cycle Assessments (LCA) are more than ever relevant in the growing effort to reduce the environmental
+        footprint and demand for resources from human consumption.
+    '''),
+    html.Div(children='''
+        LCA reports and associated visualisations are originally intended for communication within people with
+        relevant domain knowledge usually in order to document and optimize industrial processes.
+    '''),
+    html.Div(children='''
+        However, with the increasing individual attention towards, among other trends, global warming and the
+        acceptance of a need to readjust behaviour -
+    '''),
+    html.Div(children='''
+        I believe that ordinary people are gaining interest in the knowledge and data they can obtain from LCAs
+        - especially if they are communicated with updated visualisation for easier digestion.
+    ''')
 ])
 
 @app.callback(dash.dependencies.Output('display-value', 'children'),
